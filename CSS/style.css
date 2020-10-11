@@ -1,0 +1,937 @@
+/* *****　全体設計　*******************************************
+********************************************************** */
+*{
+    box-sizing: border-box;
+}
+body, p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Averia Gruesa Libre', cursive;
+
+}
+
+main{
+    padding-top: 780px;
+}
+
+.top_wrapper{
+    background-image: url("../images/main_image5S.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    min-height: 780px;
+}
+
+.prof_top_wrapper {
+    background-image: url("../images/prof_image.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    max-height: 900px;
+    background-position: center;
+}
+h1, h3, p{
+    color: whitesmoke;
+    margin: 0;
+}
+h2{
+    color: rgb(69, 69, 69);
+    padding: 10px;
+    background-image: url("../images/h2-bg.jpg");
+    display: inline-block;
+    width:70%;
+    border-radius: 2px;
+    border: solid;
+    margin-top: 10%;
+}
+ul {
+    padding:0
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(69, 69, 69)
+}
+.description{
+    width: 70%;
+    text-align: left;
+    margin: auto;
+}
+
+.clearfix{
+    clear: both;
+}
+
+
+/* *****　header　*******************************************
+********************************************************** */
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.8);
+    height: 130px;
+    z-index: 10;
+}
+
+.header_wrapper{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+header h1{
+    font-size: 15px;
+    text-align: left;
+    color: rgb(69, 69, 69);
+ 
+}
+#header_logo{
+    width: 170px;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    transition: transform 1s;
+    }
+#header_logo:hover{
+    transform: rotate(360deg);
+}
+.inquiry_form{
+    display: inline-block;
+    background-color:#e17055;
+    width:250px;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    position: absolute;
+    right: 15px;
+    border-radius: 3px;
+    box-shadow: 4px 4px #994b37;
+    }
+.inquiry_form a{
+    color:whitesmoke;
+    letter-spacing: 0.2em;
+    }
+header nav ul{
+    position: absolute;
+    bottom: 2px;
+    left:40%;
+}
+header nav ul li{
+  float: left;
+  margin-left: 20px;
+  font-size: 18px;
+  list-style: none;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+header nav ul li a:hover{
+    color:rgb(189, 140, 5)
+}
+#bars {
+    display: none;
+}
+.fa-bars:hover{
+    cursor: pointer;
+}
+/* ******* hamburger *********  */
+.open, 
+.close {
+    display: none;
+}
+input[type="checkbox"] {
+    position: absolute;
+    left:-50vw;
+}
+input[id="menu"]:checked~#bars{
+    display: none;
+}
+
+
+
+
+/* ******* hamburger *********  */
+
+
+ /* *****　introduction　*******************************************
+********************************************************** */
+.pro_wrapper{
+    width:670px ;
+    height: auto;
+
+}
+#introduction{
+    background-color:rgba(0, 0, 0, 0.6);
+    position:fixed;
+    top: 30%;
+    left:25%;
+    width: 60%;
+    margin:auto,0;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    /* font-family: Nu よもぎもち; */
+    font-size: 20px;
+    z-index: 101;
+    text-align: left;
+    padding:1%;
+    line-height: 2;
+    border-radius: 10px;
+    border: solid 5px rgba(255, 255, 255, 0.8);
+    animation: text-focus-in 17s ease 0.3s 1 normal both;
+}
+
+
+ @-webkit-keyframes text-focus-in {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+        opacity: 0;
+    }
+
+    10%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+  }
+  
+
+ /* *****　works　*******************************************
+********************************************************** */
+#works-wrapper{
+    margin-bottom: 15%;
+    width: 100%;
+}
+  
+    div#works-wrapper ul li{
+        display: inline-block;
+        float: left;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+    }
+
+    
+    .sample_img{
+        max-width:80%;
+        min-width: auto;
+        height:auto;
+        margin: 0.5em;
+        border-radius: 10%;
+    }
+
+/* *****　flow *******************************************
+********************************************************** */
+
+.flow{
+    width: 70%;
+    height: auto;
+    display: inline-block;
+    margin: auto;
+}
+.flow_sp{
+    display: none;
+}
+/* *****  price *******************************************
+********************************************************** */
+.price_img{
+    width: 70%;
+    height: auto;
+}
+.price-wrapper{
+    text-align: center;
+}
+
+
+
+/* *****　news 　*******************************************
+********************************************************** */
+div#news-wrapper{
+    height:auto;
+    margin-top: 100px;
+    }
+    
+    div#news-wrapper ul  {
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    div#news-wrapper ul li {
+        list-style: none;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        overflow: hidden;
+    }
+    div#news-wrapper p{
+        text-align: left;
+    }
+    div#news-wrapper h3{
+        text-align: left;
+    }
+
+    div#news-wrapper ul li a {
+        color: rgb(69, 69, 69);
+        text-decoration: none;
+    }
+    .thumb{
+        float: left;
+        margin-right: 10px;
+        width: 200px;
+    } 
+    .news_item{
+      overflow: hidden;
+      /* min-height: 170px;
+      max-width: 500px;
+      min-width: 100px; */
+      width:auto;
+    }
+    
+    /* *****　Back to top　*******************************************
+********************************************************** */
+#page-top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: -50px;
+    background-color: rgb(189, 140, 5);
+    opacity: 0.6;
+    border-radius: 50%;
+}
+#page-top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;   
+}
+
+#page-top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+
+
+}
+.fa-arrow-alt-circle-up:hover{
+   font-size: 110%;
+}
+
+
+/* *****　inquiry　*****************************************
+********************************************************** */
+#form-wrapper{
+    padding-top: 130px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#form-wrapper h3{
+    margin-top: 8%;
+    margin-bottom:2%;
+    font-size: 1.5rem;
+    display: inline-block;
+    width:70%;
+    border: solid;
+    
+}
+#form-wrapper h3:hover{
+    background-color:whitesmoke ;
+    color: rgb(69, 69, 69);
+}
+#form-containner{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+dt{
+    font-size: large;
+    font-family: monospace;
+}
+dd{
+    margin-bottom: 5%;
+}
+
+form input[type="checkbox"]{
+    position: static;  
+}
+textarea{
+    width: 100%;
+
+}
+.form-description{
+    width: 50%;
+    text-align: left;
+    margin: auto;
+}
+form{
+    text-align:left ;
+    display: inline-block;
+    width: 50%;
+    margin-top: 5%;
+    color: whitesmoke;
+}
+#tel-no{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+#tel-time{
+    font-weight: bolder;
+    font-stretch: semi-expanded;
+    font-size: 1.1rem;
+}
+
+#email-address{
+    font-family: monospace;
+    font-size: large;
+    border-bottom:whitesmoke;
+}
+#email-address:hover{
+    color: rgb(189, 140, 5);
+}
+
+
+
+
+/* *****　profile 　*******************************************
+********************************************************** */
+
+/* 佐川プロフィール＊＊＊＊＊ */
+.profile_sagawa{
+    height:100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right:-100%;
+    transition: all 0.25;
+    background-color:rgba(0, 0, 0, 0.6);
+}
+/* .profile_sagawa img{
+    position: absolute;
+    top:20%;
+    right: 10%;
+    height: 600px;
+    width: auto;
+} */
+
+.sagawa-btn{
+    display: block;
+    position: fixed;
+    top:61%;
+    left:25%;
+    width: 100px;
+    z-index: 99;
+}
+.sagawa-btn:hover{
+    opacity: 0.6;
+}
+
+/* checkbox 佐川 */
+.pro_wrapper input[id="sagawa-btn"]{
+    position: fixed;
+}
+.pro_wrapper input[id="sagawa-prof"]:checked~.profile_sagawa{
+    right:0;
+    bottom:0;
+    z-index: 99;
+}
+/* ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ */
+
+/* 八木プロフィール＊＊＊＊＊ */
+.profile_yagi{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:-100%;
+    transition: all 0.5s;
+    background-color:rgba(0, 0, 0, 0.6);
+}
+/* .profile_yagi img{
+    position: absolute;
+    top: 20%;
+    left:20%;
+    height:60vh;
+    width:auto;
+} */
+
+.yagi-btn{
+    display: block;
+    position: fixed;
+    top:61%;
+    right:0%;
+    width: 100px;
+    z-index: 99;
+}
+.yagi-btn:hover{
+    width:110px; 
+}
+/* checkbox yagi************ */
+.pro_wrapper input[id="yagi-btn"]{
+    position: fixed;
+}
+.pro_wrapper input[id="yagi-btn"]:checked~.profile_yagi{
+    left:0%;
+    bottom:0%;
+    z-index: 100; 
+}
+/* ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ */
+
+.avators{
+    width: 500px;
+}
+.avators_sp{
+    display:none;
+}
+
+
+/* *****　news 　*******************************************
+********************************************************** */
+div#news-wrapper{
+    height:auto;
+    margin-top: 100px;
+    }
+    
+    div#news-wrapper ul  {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    div#news-wrapper ul li {
+        list-style: none;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        overflow: hidden;
+        flex:auto;
+        width:100%;
+    }
+    div#news-wrapper ul li a {
+        color: rgb(69, 69, 69);
+        text-decoration: none;
+    }
+ 
+    .thumb{
+        /* float: left; */
+        margin-right: 10px;
+        width: 200px;
+    } 
+    .news_item{
+      overflow: hidden;
+      min-height: 170px;
+      /* max-width: 400px; */
+      min-width: 100px;
+    }
+    .news_item p{
+        text-align: left;
+      
+    }
+    .news_item h3{
+        text-align: left;
+        font-weight: 900;
+    }
+    /* *****　Back to top　*******************************************
+********************************************************** */
+#page-top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: -50px;
+    background-color: rgb(189, 140, 5);
+    opacity: 0.6;
+    border-radius: 50%;
+}
+#page-top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;   
+}
+
+#page-top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+
+
+}
+.fa-arrow-alt-circle-up:hover{
+   font-size: 110%;
+}
+
+
+/* *****　footer　*******************************************
+********************************************************** */
+footer{
+    background-color:rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.footer_logo img{
+    display: inline-block;
+    width: 250px;
+}
+footer nav ul{
+    display: inline-block;
+}
+footer nav ul li{
+    display: inline-block;
+    margin-left: 1em;
+}
+
+footer nav ul li a {
+    font-size: 15px;
+}
+.copyright{
+    color: rgb(69, 69, 69);
+}
+
+
+/* ***** RESPONSIVE 　*****************************************
+*********  tablet   **************************************** */
+/* @media(max-width:1024px){
+    h2{
+        width:80%;
+    }
+
+    div#works-wrapper ul li{
+        width: 50%;
+    }
+
+    
+    .sample_img{
+        max-width: 60%;
+        min-width: 75px;
+        height:auto;
+        margin: 0.5em;
+        border-radius: 10%;
+    }
+
+    .flow{
+        width: 80%;
+    }
+    .price_img{
+        width: 80%;
+    }
+
+    div#news ul li{
+        width: 100%;
+    }
+} */
+
+
+    
+
+/* *****　Tablet profile ********************************************/
+
+/* 佐川プロフィール＊＊＊＊＊ */
+.profile_sagawa{
+    height:100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right:100%;
+    transition: all 0.5s;
+}
+/* .profile_sagawa img{
+    position: absolute;
+    top:27%;
+    right:10%;
+} */
+
+.sagawa-btn{
+    display: block;
+    position: fixed;
+    top:58%;
+    left:5%;
+    width: 100px;
+    /* z-index: 100; */
+}
+.sagawa-btn:hover{
+    opacity: 0.6;
+}
+
+/* checkbox 佐川 */
+.pro_wrapper input[id="sagawa-btn"]{
+    position: fixed;
+}
+.pro_wrapper input[id="sagawa-btn"]:checked~.profile_sagawa{
+    right:0%;
+    bottom:0;
+    z-index: 101;
+}
+/* ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ */
+
+/* 八木プロフィール＊＊＊＊＊ */
+/* .profile_yagi{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:180px;
+    left:-150%;
+    transition: all 0.2s;
+}
+.profile_yagi img{
+    position: absolute;
+    top: 2%;
+    left:2%;
+}
+*/
+.yagi-btn{
+    display: block;
+    position: fixed;
+    top:58%;
+    right:15%;
+    width: 100px;
+    z-index: 99;
+}
+.yagi-btn:hover{
+    width:110px;
+} 
+/* checkbox yagi */
+/* .pro_wrapper input[id="yagi-btn"]{
+    position: fixed;
+}
+.pro_wrapper input[id="yagi-btn"]:checked~.profile_yagi{
+    left:100vh;
+    bottom:0;
+    z-index: 99;
+} */
+
+/* ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ */
+
+.avators{
+    display: none;
+}
+.avators_sp{
+    display: inline-block;
+        width: 350px;
+        padding-top: 50%;
+}
+/* ********  Samrtphone  **************************************** */
+@media (max-width:768px) {
+
+    .top_wrapper{
+        background-image: url("../images/main_image4_resp.jpg");
+        font-size: 20px;
+    }
+    .prof_top_wrapper {
+        background-position: center;
+        background-image: url("../images/prof_image_resp.jpg");
+        font-size: 2rem;
+    }
+
+
+    header{
+        position:fixed;
+        height:180px;
+        z-index: 105;
+    }
+    header h1{
+        font-size: small;
+    }
+    header nav ul{
+        max-width: 90px;
+        height: 100px;
+        padding: 0;
+        position: fixed;
+        z-index:200 ;
+        top:180px;
+        left:-250px;
+        transition:all 0.2s;
+    }
+    header nav ul li {
+        margin:0;
+    }
+    header nav ul li a{
+        font-size: 25px;
+        display: inline-block;
+        width: 250px;
+        color: whitesmoke;
+        background:rgba(0, 0, 0, 0.6);
+      }
+
+      div#news-wrapper ul  {
+        width: 80% !important;
+      }
+
+      .thumb{
+          width: 100%;
+          min-height:300px;
+      }
+    .news_item{
+          width: 100%;
+      }
+      /* ******** hamburger ********* */
+
+      .open, 
+      .close, .menu {
+        display: inline-block;
+    }
+    .close{
+        position: absolute; 
+        right:-140px;
+        color:whitesmoke;
+        font-size: x-large;
+        
+    }
+    input[type="checkbox"]:checked ~ nav ul {
+        position: fixed;
+        left:1%;
+    }
+  
+    /* ******** hamburger ********* */
+    .inquiry_form{
+        width: 110px;
+        padding: 1px;
+        top:20%;
+
+    }
+    .inquiry_form span{
+        display: none;
+    }
+  
+    .fa-envelope,.fa-phone-square{
+        font-size: 40px;
+    }
+    
+    #bars {
+        display: inline-block;
+    }
+    .fa-bars{
+        position: fixed;
+        right: 6%;
+        top: 15%;
+
+        font-size: 60px;
+    }
+    .fa-bars:hover{
+        cursor: pointer;
+    }
+    div#works-wrapper ul li{
+        width: 70%;
+        float:none;
+        padding-bottom: 10%;
+    }
+
+    .sample_img{
+        max-width: 60%;
+        min-width: 75px;
+        height:auto;
+        margin: 0.5em;
+        border-radius: 10%;
+    }
+
+    .flow{
+        display:none;
+    }
+    .flow_sp{
+        display: inline-block;
+        width: 80%;
+    }
+    .price_img{
+        width: 80%;
+    }
+    .description{
+        width: 80%;
+    }
+
+}
+
+@media(max-width:1024px){
+    h2{
+        width:80%;
+    }
+
+    div#works-wrapper ul li{
+        width: 50%;
+    }
+
+    
+    .sample_img{
+        max-width: 60%;
+        min-width: 75px;
+        height:auto;
+        margin: 0.5em;
+        border-radius: 10%;
+    }
+
+    .flow{
+        width: 80%;
+    }
+    .price_img{
+        width: 80%;
+    }
+
+    div#news ul li{
+        width: 100%;
+    }
+
+}
+
+
+@media(min-width:1025px){
+    .avators{
+        display: inline-block;
+        padding-top: 2%;
+    }
+    .avators_sp{
+        display: none;
+          
+    }
+
+    .yagi-btn{
+        top:61%;
+        right:35%;
+    }
+    .sagawa-btn{
+        top:61%;
+        left:25%;
+    }
+
+}
+
